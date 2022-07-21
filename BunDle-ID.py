@@ -1,7 +1,5 @@
-import requests
+from requests import get
 from user_agent import generate_user_agent
-#1ST ~ @TweakPY
-#Apple Will Give us a Cup of Tea
 print('''  
 ██████╗ ██╗   ██╗███╗   ██╗██████╗ ██╗     ███████╗    ██╗██████╗ 
 ██╔══██╗██║   ██║████╗  ██║██╔══██╗██║     ██╔════╝    ██║██╔══██╗
@@ -9,7 +7,7 @@ print('''
 ██╔══██╗██║   ██║██║╚██╗██║██║  ██║██║     ██╔══╝╚════╝██║██║  ██║
 ██████╔╝╚██████╔╝██║ ╚████║██████╔╝███████╗███████╗    ██║██████╔╝
 ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═════╝ ╚══════╝╚══════╝    ╚═╝╚═════╝ 
-<\> @TweakPY                                                                   
+By @TweakPY  - @vv1ck                                                             
 ''')
 #ex: com.zhiliaoapp.musically
 #ex: com.burbn.instagram
@@ -26,7 +24,7 @@ head={
 	'Application/json': 'Content-Type',
 	'Accept-Encoding': 'gzip, deflate',
 	'Connection': 'close'}
-req=requests.get(f'https://itunes.apple.com/lookup?bundleId={bundleid}&country=SA',headers=head)
-print(req.text)
+r=get(f'https://itunes.apple.com/lookup?bundleId={bundleid}&country=SA',headers=head)
+print(r.text)
 print('-------------------------------------')
 
